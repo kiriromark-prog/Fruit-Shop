@@ -1,0 +1,122 @@
+*{
+  padding: 0;
+  margin: 0; 
+  background-color: antiquewhite; 
+
+}
+
+h1{
+  text-align: center;
+  margin: 10px;
+  color: brown;
+}
+
+.price{
+  color: black;
+  font-size: 18px;
+  margin: 5px 0;
+  
+}
+
+.add{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: tomato;
+  border-radius: 8px;
+  color: black;
+  padding: 1px 2px;
+  margin-top: 20px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.add:hover {
+  background-color: var(--primary);
+  color: rgb(156, 56, 56);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;}
+
+img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+
+  .content {
+    flex: 1;
+
+    h2 {
+      color: var(--text-h);
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--text);
+      line-height: 1.6;}
+}
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.next-steps {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+
+  .content {
+    flex: 1;
+
+    h2 {
+      color: var(--text-h);
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--text);
+      line-height: 1.6;   }
+    }}
+
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 25px;
+
+  
+  }
+
+  p {
+    color: var(--text);
+    line-height: 1.6;
+
+}   

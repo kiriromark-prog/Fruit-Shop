@@ -5,6 +5,8 @@ import Card from "./card";
 import "./App.css";
 
 function App() {
+
+    
     const [cart, setCart] = React.useState([]);
 
     const addToCart = (item) => {

@@ -5,6 +5,17 @@ import About from './about'
 import Cart from './cart'
 
 function App() {
+
+const [darkMode, setDarkMode] = useState(false);
+
+const toggleDarkMode = () => {
+  setDarkMode(!darkMode);
+  // This line switches the CSS variables globally
+  document.documentElement.setAttribute('data-theme', darkMode ? 'light' : 'dark');
+};
+  
+
+
    const [cart, setCart] = useState([]);
 
    const addToCart = (product) => {
@@ -14,6 +25,12 @@ function App() {
 
   return (
     <>
+  <div className= {darkMode ? 'app dark-mode' : 'app'}>
+    <button onClick={toggleDarkMode} className="dark-mode-toggle">
+      {darkMode ? 'Light Mode' : 'Dark Mode'}
+    </button>
+  </div>
+    
     <h1>Fruit Store</h1>
 <hr />
 
@@ -27,8 +44,10 @@ function App() {
       <Card name="pineapple" price={2.99} onAdd ={addToCart} image= "./pineapple.jpg" />
       <Card name="garlic" price={2.99} onAdd ={addToCart} image= "./garlic.jpg" />
     </div>
-<hr />
+
+<div className="cart-section">
     <Cart cartItems={cart}/>
+    </div>
 <hr />
     <About/>
     </>
